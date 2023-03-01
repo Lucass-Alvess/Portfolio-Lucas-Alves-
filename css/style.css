@@ -338,7 +338,6 @@ button:hover {
   display: flex;
   justify-content: center;
   gap: 7.5rem;
-  cursor: pointer;
   height: 300px;
 }
 
@@ -405,7 +404,7 @@ button:hover {
   .card {
     width: 400px;
     margin: 0px 30px;
-    margin-bottom: 10px;
+    margin-bottom: 45px;
 
   }
 
@@ -668,8 +667,12 @@ button:hover {
     }
 
     .intro h2,
-    p {
-      font-size: 2.8rem
+    span {
+      font-size: 2.2rem
+    }
+
+    .intro p {
+      font-size: 1rem;
     }
 
     .profile {
@@ -685,17 +688,19 @@ button:hover {
       border-radius: 200px;
       height: 10%;
       margin: auto;
+      margin-top: 1.8rem;
+      margin-bottom: -60px;
     }
 
     .curiculo {
-      display: flex;
+      display: none;
       justify-content: center;
       margin-top: 1rem;
     }
 
     .curiculo button {
       height: 2rem;
-      width: 9rem;
+      width: 8rem;
       border: 1px solid;
       border-radius: 1rem;
     }
@@ -738,12 +743,12 @@ button:hover {
 
     .habilidades {
 
-      height: 400px;
+      height: 450px;
     }
 
     .habilidades h2 {
 
-
+      margin-top: 1rem;
       font-size: 2rem;
       margin-bottom: 75px;
     }
@@ -794,8 +799,8 @@ button:hover {
       justify-content: center;
       align-items: center;
       border: 1px solid transparent;
-      height: 130px;
-      width: 122px;
+      height: 90px;
+      width: 90px;
       object-fit: cover;
     }
 
@@ -803,12 +808,32 @@ button:hover {
       align-items: center;
       justify-content: center;
       justify-items: center;
-      height: 120px;
-      width: 120px;
+      height: 100px;
+      width: 100px;
     }
 
     .habilidades-des {
       display: none;
     }
+
+    .icons {
+      display: flex;
+      justify-content: left;
+      margin-left: 7rem;
+      flex-wrap: wrap;
+      flex: 1;
+      gap: 7.5rem;
+      margin-left: 4rem;
+    }
+
+    .icon-des {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .profile img {
+    width: 75%;
   }
 }
