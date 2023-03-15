@@ -48,7 +48,11 @@ function toggleMenu(event) {
 }
 function menuOf() {
   const menu = document.querySelector('.menu-nav');
+  const menuX = document.querySelector('#displa-x');
+  const menuM = document.querySelector('#displa-m');
   menu.classList.remove('active');
+  menuX.classList.remove('active')
+  menuM.classList.remove('active')
 }
 menuOf()
 
