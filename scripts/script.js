@@ -1,5 +1,6 @@
 const menuItems = document.querySelectorAll('.menu-nav a');
 const menuMobile = document.querySelector('#menu-mobile');
+const menuof = document.querySelector('.of')
 const target = document.querySelectorAll('[data-anime]');
 const animationClass = 'animate';
 const nameArray = document.querySelectorAll('.intro-name');
@@ -32,7 +33,8 @@ function scrollClick(event) {
   });
 }
 
-function toggleMenu() {
+function toggleMenu(event) {
+  if (event.type === 'touchstart') event.preventDefault();
   const menu = document.querySelector('.menu-nav');
   menu.classList.toggle('active');
   function openMenu() {
@@ -42,7 +44,16 @@ function toggleMenu() {
     menuM.classList.toggle('active');
   }
   openMenu();
+
 }
+function menuOf() {
+  const menu = document.querySelector('.menu-nav');
+  menu.classList.remove('active');
+}
+menuOf()
+
+
+
 
 const debounce = function (func, wait, immediate) {
   let timeout;
@@ -131,9 +142,10 @@ const initTypingAnimation = () => {
 initTypingAnimation()
 
 menuMobile.addEventListener('click', toggleMenu);
+menuMobile.addEventListener('touchstart', toggleMenu);
+menuof.addEventListener('click', menuOf);
 if (target.length) {
   window.addEventListener('scroll', debounce(function () {
     animeScroll();
   }, 200));
 }
-
